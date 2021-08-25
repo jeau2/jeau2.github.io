@@ -1,0 +1,46 @@
+import java.util.Scanner;
+/**
+ * Write a description of class WindowPane here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class WindowPane
+{
+    public static void main(String[] args)
+    {
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter X Y width height of top left rectangle:");
+        int x = in.nextInt();
+        int y = in.nextInt();
+        int width = in.nextInt();
+        int height = in.nextInt();
+
+        Rectangle topLeft = new Rectangle(x,y,width, height);
+        topLeft.setColor(Color.BLUE);
+        topLeft.fill();
+        /* add your code to create a window pane
+         * with rectangles here.  name your rectangles topRight, bottomLeft, bottomRight
+         */
+
+
+        Rectangle topRight = new Rectangle(x+width,y,width, height);
+        topRight.setColor(Color.GREEN);
+        topRight.fill();
+
+
+        Rectangle bottomLeft = new Rectangle(x,y+height,width, height);
+        bottomLeft.setColor(Color.RED);
+        bottomLeft.fill();
+
+        Rectangle bottomRight = new Rectangle(x+width,y+height,width, height);
+        bottomRight.setColor(Color.YELLOW);
+        bottomRight.fill();
+
+         // Do not change code below
+         //System.out.println(bottomRight);
+         //System.out.println(topRight);
+         //System.out.println(bottomLeft);
+    }
+}
